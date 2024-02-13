@@ -135,4 +135,4 @@ CHANNEL_LAYERS = {
         },
     },
 }
-ALLOWED_HOSTS =['15.164.135.250']
+ALLOWED_HOSTS =['15.164.135.250','facemeets.com']
