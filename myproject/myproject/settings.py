@@ -127,13 +127,11 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = '/'
 
 ASGI_APPLICATION = 'myproject.asgi.application'
-
-# settings.py
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
+            'hosts': [('localhost', 6379)],
         },
     },
 }
