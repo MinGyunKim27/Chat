@@ -139,4 +139,4 @@ CHANNEL_LAYERS = {
         },
     },
 }
-ALLOWED_HOSTS =['3.37.58.70']
+ALLOWED_HOSTS =['15.164.135.250/']
