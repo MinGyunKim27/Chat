@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        body {
+            font-family: '맑은 고딕', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1f2eb; /* 민트색 배경 */
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* 흰색 배경 */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #05c46b; /* 민트색 버튼 */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #079992; /* 민트색 버튼 (더 어두운 색상) */
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 22px); /* 좌우 패딩 고려한 너비 */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="id_username">사용자 이름:</label>
+        {{ form.username }}
+        <label for="id_email">이메일:</label>
+        {{ form.email }}
+        <label for="id_password1">비밀번호:</label>
+        {{ form.password1 }}
+        <label for="id_password2">비밀번호 확인:</label>
+        {{ form.password2 }}
+        <button type="submit">가입하기</button>
+    </form>
+</body>
+</html>
